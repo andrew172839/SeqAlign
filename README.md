@@ -1,1 +1,1 @@
-Here are some sequence analysis codes (in Perl), which were used in my Bioinformatics research
+seqAlign is a set of sequence analysis codes (in Perl), used in Bioinformatics research
