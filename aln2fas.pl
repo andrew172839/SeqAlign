@@ -3,13 +3,13 @@
 #check command-line arguments
 if (@ARGV != 2) {
 	printf STDERR "aln2fas.pl <arg1> <arg2>\n";
-	printf STDERR "<arg1>: clustalw alignment file\n";
-	printf STDERR "<arg2>: fasta-format sequence file\n";
+	printf STDERR "<arg1>, clustalw alignment file\n";
+	printf STDERR "<arg2>, fasta-format sequence file\n";
 	exit;
 }
 #check if clustalw alignment file exists
 if (not -f $ARGV[0]) {
-	printf STDERR "aln2fas.pl error: $ARGV[0] not found\n";
+	printf STDERR "aln2fas.pl error, $ARGV[0] not found\n";
 	exit;
 }
 #open clustalw alignment file
@@ -19,7 +19,7 @@ $alnlen = @alntxt;
 close(ALN);
 #check the title of clustalw alignment file
 if ($alntxt[0] !~ /CLUSTAL/) {
-	printf STDERR "aln2fas.pl error: title line not found in alignment\n";
+	printf STDERR "aln2fas.pl error, title line not found in alignment\n";
 	exit;
 }
 #read in the clustalw alignment
